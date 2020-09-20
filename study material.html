@@ -30,7 +30,8 @@
 	</ul>
   </div>
   <div id="FirstYear">
-    <h2 id="firstYearNotes"><u><b>First Year Notes</b></u></h2>  
+    <h2 id="firstYearNotes"><u><b>First Year Notes</b></u></h2> 
+	<input type="text" id="firstYearSearch" name="myInput" onkeyup="mySearchFunction()" placeholder="Enter subject..." class="searchBar">	
 	<ul id="firstYearSubjects">
 	  <li><a href="">Basic Computer Engineering(BCE) notes</a></li>
 	  <li><a href="">Basic Mechanical Engineering(BME) notes</a></li>
@@ -45,7 +46,7 @@
   
   <div id="secondYear">
     <h2 id="secondYearNotes"><u><b>Second Year Notes</b></u></h2>
-
+	<input type="text" id="secondYearBranch" name="myInput" onkeyup="mySearchFunction2()" placeholder="Enter subject..." class="searchBar">
 	<h4>Branches</h4>
 	<ul id="secondYearSubjects">
 	  <li><b>Computer Science Engineering(CSE)</b></li>
@@ -91,6 +92,7 @@
   </div>
    <div id="thirdYear">
     <h2 id="thirdYearNotes"><u><b>Third Year Notes</b></u></h2>
+	<input type="text" id="thirdYearBranch" name="myInput" onkeyup="mySearchFunction3()" placeholder="Enter subject..." class="searchBar">
 	<h4>Branches</h4>
 	<ul id="thirdYearSubjects">
 	  <li><b>Computer Science Engineering(CSE)</b></li>
@@ -128,6 +130,7 @@
   
   <div id="fourthYear">
     <h2 id="fourthYearNotes"><b><u>Fourth Year Notes</u></b></h2>
+	<input type="text" id="fourthYearBranch" name="myInput" onkeyup="mySearchFunction4()" placeholder="Enter subject..." class="searchBar">
 	<h4>Branches</h4>
 	<ul id="fourthYearSubjects">
 	  <li><b>Computer Science Engineering(CSE)</b></li>
@@ -200,5 +203,71 @@
   </div>
  
 </div>  
+<script>
+	function mySearchFunction(){
+		let input = document.getElementById('firstYearSearch').value;
+		input = input.toLowerCase();
+		let list = document.getElementById('firstYearSubjects');
+		let item = list.getElementsByTagName('li'); 
+		for(var i=0; i< item.length; i++){
+			if(item[i].innerHTML.toLowerCase().indexOf(input) > -1){
+				item[i].style.display = "list-item";
+				
+			}
+			else{
+				item[i].style.display = "none";
+			}
+		}
+	}
+	function mySearchFunction2(){
+		let input = document.getElementById('secondYearBranch').value;
+		input = input.toLowerCase();
+		let list = document.getElementById('secondYearSubjects');
+		let item = list.getElementsByTagName('li'); 
+		for(var i=0; i< item.length; i++){
+			if(item[i].innerHTML.toLowerCase().indexOf(input) > -1){
+				item[i].style.display = "list-item";
+				
+			}
+			else{
+				item[i].style.display = "none";
+			}
+		}
+	}
+	function mySearchFunction3(){
+		let input = document.getElementById('thirdYearBranch').value;
+		input = input.toLowerCase();
+		let list = document.getElementById('thirdYearSubjects');
+		let item = list.getElementsByTagName('li'); 
+		for(var i=0; i< item.length; i++){
+			if(item[i].innerHTML.toLowerCase().indexOf(input) > -1){
+				item[i].style.display = "list-item";
+				
+			}
+			else{
+				item[i].style.display = "none";
+			}
+		}
+	}
+	function mySearchFunction4(){
+		let input = document.getElementById('fourthYearBranch').value;
+		input = input.toLowerCase();
+		let list = document.getElementById('fourthYearSubjects');
+		let item = list.getElementsByTagName('li'); 
+		for(var i=0; i< item.length; i++){
+			if(item[i].innerHTML.toLowerCase().indexOf(input) > -1){
+				item[i].style.display = "list-item";
+				
+			}
+			else{
+				item[i].style.display = "none";
+			}
+		}
+	}
+	
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
