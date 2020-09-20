@@ -6,16 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  </head>
+	 <style>
+	.container{
+	  background-color : #fae3ac;
+	  margin-left : 15%;
+	}
+	h1{
+	  font-family: "Times New Roman", Times, serif;  
+	}
+	#headDivision{
+	  background-color:#f57f36;
+	}
+	.searchBar{
+	  width : 30%;
+	  border-width : 2px
+	}
+	.searchBar:focus{
+	  width:70%;
+	}
+	a{
+	  color:#1414fc;
+	}
+    .sideNavBar {
+	  margin: 0;
+	  padding: 0;
+	  background-color: #000000;
+	  position: fixed;
+	  width : 15%;
+	  height: 100%;
+	  overflow: auto;
+	}
+	.sideList{
+	  color : #c4f9ff;
+	}
+	#notes{
+	  color : #ffff00;
+	}
+  </style>
+ </head>
 <body>
 
-<div class="container">
-  <div id="headDivision"> 
-  <h1><u><b>Study Materials </b></u></h1>
-  <p style="font-size:20px">There are all study materials like notes and syllabus that you will need.</p> 
-  </div>
-  
-  <div id="headDivision2" class="sideNavBar">
+<div id="headDivision2" class="sideNavBar">
 	<ul id="notes">Notes:-
 	<li><a class="sideList" href = "#firstYearNotes">1st Year - click here</a></li>
 	<li><a class="sideList" href = "#secondYearNotes">2nd Year - click here</a></li>
@@ -29,6 +60,13 @@
 	<li><a class="sideList" href = "#fourthYearSyllabus">4th Year - click here</a></li>
 	</ul>
   </div>
+
+<div class="container">
+  <div id="headDivision"> 
+  <h1><u><b>Study Materials </b></u></h1>
+  <p style="font-size:20px">There are all study materials like notes and syllabus that you will need.</p> 
+  </div>
+  
   <div id="FirstYear">
     <h2 id="firstYearNotes"><u><b>First Year Notes</b></u></h2> 
 	<input type="text" id="firstYearSearch" name="myInput" onkeyup="mySearchFunction()" placeholder="Enter subject..." class="searchBar">	
@@ -201,6 +239,7 @@
 	  <li><a href=""><b>Information Technology(IT)</b></a></li>
 	</ul>
   </div>
+
  
 </div>  
 <script>
